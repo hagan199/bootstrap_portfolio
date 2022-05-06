@@ -5,6 +5,39 @@ body {
   background: hsl(0, 0%, 90%);
 }
 
+.group {
+  perspective: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 718px;
+}
+.box {
+  transform: rotateX(45deg);
+}
+
+.box-1 {
+  transform: perspective(100px) rotateX(45deg);
+}
+
+.box-2 {
+  transform: perspective(1000px) rotateX(45deg);
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .top-mob {
   height: 718px;
   background-image: url('/assets/background-desk.png');
